@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Movie {
+private:
+    string title;
+    string director;
+    int duration; // duration in minutes
+    string hero;
+
+public:
+    // Member function to input movie details
+    void inputDetails() {
+        cout << "Enter movie title: ";
+        getline(cin, title);
+        cout << "Enter director's name: ";
+        getline(cin, director);
+        cout << "Enter duration (in minutes): ";
+        cin >> duration;
+        cin.ignore(); // Clear newline from input buffer
+        cout << "Enter hero's name: ";
+        getline(cin, hero);
+    }
+
+    // Member function to display movie details
+    void displayDetails() const {
+        cout << "\nMovie Details:\n";
+        cout << "Title: " << title << endl;
+        cout << "Director: " << director << endl;
+        cout << "Duration: " << duration << " minutes" << endl;
+        cout << "Hero: " << hero << endl;
+    }
+};
+
+int main() {
+    Movie movie1, movie2;
+
+    cout << "Enter details for Movie 1:\n";
+    movie1.inputDetails();
+
+    cout << "\nEnter details for Movie 2:\n";
+    movie2.inputDetails();
+
+    cout << "\nDisplaying Movie 1 Information:";
+    movie1.displayDetails();
+
+    cout << "\nDisplaying Movie 2 Information:";
+    movie2.displayDetails();
+
+    return 0;
+}

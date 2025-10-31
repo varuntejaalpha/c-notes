@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class teacher {
+    public://data members
+    string name;
+    string dept;
+    int experience;
+    double salary;
+    
+    //constructor
+    teacher(string n,string d,int e,int s)
+    {
+        
+       cout<<"teacher name:"<<n<<endl;
+       cout<<"department:"<<d<<endl;
+       cout<<"experience:"<<e<<endl;
+       cout<<"salary:"<<s<<endl;
+}
+};
+
+int main()
+{
+    teacher t1("aryn","7 wonders of world",10000,10000);//Create an object
+    teacher t2("siva","maths",7777,7777);//create an object
+    return 0;
+}
